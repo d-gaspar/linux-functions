@@ -1,4 +1,15 @@
 
+############################################################################
+# AUTHOR: DANIEL GASPAR GONÇALVES - 16/07/2019 - V1.0                      #
+# convert pdf file into images (png, jpg ...)                              #
+# USAGE: ./converter_pdf.sh "path containing pdf files" "output extension" #
+############################################################################
+
+# Possibly error and how to solve
+# # """convert:not authorized ... """ ERROR
+# sudo vim /etc/ImageMagick-6/policy.xml
+# change '''policy domain="coder" rights="none" pattern="PDF"''' to '''policy domain="coder" rights="read|write" pattern="PDF"'''
+
 path=$1
 output_ext=$2
 
@@ -28,7 +39,3 @@ then
 else
 	printf "É necessário colocar o caminho"
 fi
-
-# # """convert:not authorized ... """ ERROR
-# sudo vim /etc/ImageMagick-6/policy.xml
-# change '''policy domain="coder" rights="none" pattern="PDF"''' to '''policy domain="coder" rights="read|write" pattern="PDF"'''
