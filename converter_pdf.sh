@@ -37,5 +37,5 @@ then
 		fi
 	done
 else
-	printf "É necessário colocar o caminho"
+	printf "Error: Input path missing."
 fi
